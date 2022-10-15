@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      var partyObject = {
+      //Creating Array
+      "Nepali Congress": [
+        "Bishownath Poudel",
+        "Uttam Joshi",
+        "Umesh Shrestha",
+        "Surya Kanta Ghimire",
+        "Kiran Bhusad Oli",
+      ],
+      "Communist Party of Nepal (UML)":[
+        "Surendra Prasad Pandey",
+        "Devi Prasad Gywali ",
+        "Krishna Prasad Silwal",
+        "Krishna Bhakta Pokhel",
+        "Krishna Prasad Bhurtel",
+        "Saraswoti Bista",
+        "Prakash Khanal Shailesh",
+        "Jaganath Thapaliya ",
+      ],
+
+      "Rastriya Prajatantra Party":[
+        "Madhup Kumar Bhattrai ",
+        "Jagadishor Adhikari ",
+        "Rukmagat Pokhrel",
+        "Sunil Kumar Chhetri",
+        "Gir Bahadur Tamang",
+        "Rina Gurung",
+        "Bikram Pandey",
+        "Rim Nath Kandel",
+        ],
+
+      "Rastriya Swatantra Party":[
+        "Ravi Lammichanne",
+        "Jita Baral",
+        "Hari Dhakal ",
+      ],
+      "Independent":[
+        "Arun Kumar Upredy",
+        "Utsab Dhamala",
+        "Omkrishna Thapaliya",
+        "Kumar Aacharya",
+        "Jiwan Tamang",
+        "Tilak Mani Pathak ",
+        "Dipak Pathak",
+        "Bishnu Lama",
+        "Rajan Neupane",
+        "Rajendra Prasad Burlakoti ",
+        "Apsara Adhikari",
+        "Khem Lal Subedi",
+        "Samjhana Regmi",
+        "Sarita Lammichanne",
+        "Santa Kumari Panta",
+        "Sabitri Neupane",
+        "Tilak Bahadur Thapa Magar",
+        "Angur Panta",
+        "Khem Raj Bhattrai",
+        "Jagadish Aaryal",
+        "Dev Raj Poudel ",
+        "Devika Kuwar",
+        "Sudarshan Pradhan",
+        "Sundar Dallakoti ",
+        "Laxmi Sharma ",
+        "Krishna Prasad Adhikari ",
+        "Tej Prasad Ghimire",
+        "Bharat Bohora",
+        "Sudha Dawadi",
+        "Jagannath Poudel",
+        "Taranath Poudel ",
+        "Dinesh Koirala",
+        "Nanda Raaj Upadhhya",
+        "Badri Silwal",
+        " Basudev Sapkota",
+        " Bhimsen Basnet",
+        "Rajan Sapkota",
+        "Hari Tamang",
+        "Rammani Neupane",
+        "Shisir Khatiwada",
+        "Saroj Timilsina",
+        "Dhan Bahadur Gurung ",
+        "Bikram Bhusal ",
+        "Binod Dharel",
+        "Shyam Karki "
+      ],
+
+      "Others":[
+        "Ajay Thakur Hajam",
+        "Arjun Praja",
+        "Kumari Thing",
+        "Govinda Prasad Rijal",
+        "Navin Khadka",
+        "Kedar Raj Panta",
+        "Raj Kumar Gurung",
+        "Rubindra Sid Gurung",
+        "Hari Prasad Duwal",
+        "Hariram Rimal",
+        "Ghan Shyam Dahal",
+        "Prem Kumar Shrestha",
+        "Ram Sharan Tripathi",
+        "Sushila Thapa Magar",
+        "Kripa Goley",
+        "Amrit Tamang",
+        "Tek Bahadur Tamang",
+        "Prabha Tripathi",
+        "Mustafa Oli",
+        "Gyanendra Praja",
+        "Rakesh Bikram Shahi ",
+        "Rupa Thapa Magar",
+        "Lal Bahadur Rana",
+        "Thakur Prasad Dhakal",
+        "Jaag Bahadur Pun Magar",
+        "Navaraj Ghale",
+        "Padam Thapa Magar",
+        "Faindra Jung Gurung ",
+        "Bhoj Raj Adhikari",
+        "Amrit Kharel",
+        "Krishna Prasad Sharma Khanal ",
+        "Buddhi bahadur Gharti ",
+        "Lila Kumari Praja",
+        "Usha Giri ",
+        "Krishna Bahadur Tamang",
+        "Prithvi Prasad Chimrina",
+        "Prem Bahadur Gurung",
+
+      ]
+      }
+
+
+      window.onload = function() {
+      var partySel = document.getElementById("party");
+      var candidateSel = document.getElementById("candidate");
+
+      for (var x in partyObject) {
+        partySel.appendChild(new Option(x, x));
+      }
+      partySel.onchange = function() {    //empty party and candidates dropdowns
+
+
+        candidateSel.length = 1;
+        //display correct values
+        for (var y in partyObject[this.value]) {
+          candidateSel.appendChild(new Option(partyObject[this.value][y],y));
+        }
+      }
+
+    }
+
+    </script>
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Chitrawan Khabar</title>
+    <meta content="" name="description" />
+
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header id="header" class="header fixed-top">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="images/chitrawan-khabar-Header-Logo.png" alt="" />
+        </a>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li>
+              <a
+                class="nav-link scrollto"
+                href="https://chitrawankhabar.com/"
+                target="_blank"
+                >News</a
+              >
+            </li>
+            <li>
+              <a class="getstarted scrollto" href="index.html">Home</a>
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+      </div>
+    </header>
+    <!-- End Navbar -->
+
+    <!-- Vote Form -->
+    <section id="hero">
+      <div class="container">
+        <div class="py-5 text-center">
+          <h2>Federal Parliament & Provincial Assembly Election 2022</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <img src="images/vote.png" alt="" />
+          </div>
+
+          <div class="col-md">
+            <h4 class="mb-3">Vote Today</h4>
+            <form class="needs-validation" novalidate>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="first-name">First Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="first-name"
+                    placeholder=""
+                    value=""
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="last-name">Last Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="last-name"
+                    placeholder=""
+                    value=""
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="phone-number">Phone Number </label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="phone-number"
+                  placeholder=""
+                />
+                <div class="invalid-feedback">
+                  Please enter a valid phone number.
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="age">Age </label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="age"
+                  placeholder=""
+                />
+              </div>
+
+              <h4 class="mb-3">Gender</h4>
+              <div class="d-block my-3">
+                <div class="custom-control custom-radio">
+                  <input
+                    id="credit"
+                    name="paymentMethod"
+                    type="radio"
+                    class="custom-control-input"
+                    checked
+                    required
+                  />
+                  <label class="custom-control-label" for="credit">Male</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input
+                    id="debit"
+                    name="paymentMethod"
+                    type="radio"
+                    class="custom-control-input"
+                    required
+                  />
+                  <label class="custom-control-label" for="debit">Female</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input
+                    id="paypal"
+                    name="paymentMethod"
+                    type="radio"
+                    class="custom-control-input"
+                    required
+                  />
+                  <label class="custom-control-label" for="paypal">Other</label>
+                </div>
+              </div>
+
+              <div class="row">
+
+                <div class="col-md-5 mb-3 ">
+                 Political-Party:
+                 <select name="party" id="party">
+                  <option value="" selected="selected">Select political-party</option>
+                 </select>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                 Candidate:
+                 <select name="candidate" id="candidate">
+                <option value="" selected="selected"> Select candidate first</option>
+                </select>
+
+
+                </div>
+              </div>
+
+              <!-- <hr class="mb-4" /> -->
+              <button class="votenow-btn" type="submit">Vote Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Vote Form -->
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg col-md-12 footer-info">
+              <a href="index.html" class="logo d-flex align-items-center">
+                <img src="images/chitrawan-khabar-Header-Logo.png" alt="" />
+              </a>
+              <p>
+                Run by P.L. Multimedia Services Pvt. Ltd. (Chitrawankhabar.com)
+                Chitravan Khabar
+              </p>
+              <p>Information Department Registration Number: 3165-2078/79</p>
+              <p>Company Register Registration Number: 277246/078/079</p>
+
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"
+                  ><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Chitrawan Khabar</span></strong
+          >. All Rights Reserved
+        </div>
+        <!-- <div class="credits">
+          Designed by <span>Loem Ipsum</span>
+        </div> -->
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
